@@ -35,7 +35,7 @@ public class BarbeariaService {
                     Situacao situacao = this.cortandoCabelo(cliente, clientQueue, idCorte);
                     tempoLoop = tempoLoop + situacao.getTempo();
 
-                    if((tempoCorte + tempoDomindo)/60 <= 8){
+                    if((tempoCorte + tempoDomindo) < 460){
                         if("cortando".equals(situacao.getTipoTempo()))
                             tempoCorte = tempoCorte + situacao.getTempo();
                         else
